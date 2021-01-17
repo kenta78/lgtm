@@ -20,7 +20,7 @@ jobs:
     steps:
       -checkout
       -restore_cache:
-        key:dep-{{checksum"requirements.lock}}
+        key:deps-{{checksum"requirements.lock}}
       - run:
          command: |
           python3 -m unittest -v
